@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyToFlag: UIImageView!
     @IBOutlet weak var currencyToPrefix: UILabel!
     @IBOutlet weak var currencyToValue: UILabel!
+    @IBOutlet weak var convertButton: UIButton!
     
     //Declare currencyFormatter
     var currencyFormatter = NumberFormatter()
@@ -37,6 +38,10 @@ class ViewController: UIViewController {
         //Set View Corner Radius
         currencyFromView.layer.cornerRadius = 20
         currencyToView.layer.cornerRadius = 20
+        convertButton.layer.cornerRadius = 10
+        convertButton.backgroundColor = UIColor.white
+        convertButton.isEnabled = false
+        convertButton.alpha = 0.5
         
         //Set currency to flag
         currencyToFlag.image = currency.flag
@@ -50,18 +55,31 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
+        
+        convertButton.isEnabled = isConvertButtonEnabled(textField: currencyFromTextField)
+        
+        if convertButton.isEnabled == true {
+            convertButton.alpha = 1
+        } else {
+            convertButton.alpha = 0.5
+        }
         self.view.endEditing(true)
+        
     }
     
-    @IBAction func currencyFromDidChange(_ sender: Any) {
-        
-       guard let dollars: Double = Double(currencyFromTextField.text ?? "0") else { return }
-        if currencyFromTextField.text?.isEmpty == true {
-            currencyToValue.text = "0.00"
+    func isConvertButtonEnabled(textField: UITextField) -> Bool {
+        if textField.text == "" {
+            return false
         } else {
-            currencyToValue.text = String(format: "%.2f", convert(dollars: dollars))
+            return true
         }
+    }
+    
+    @IBAction func convertButtonPressed(_ sender: Any) {
+        
+        guard let dollars: Double = Double(currencyFromTextField.text ?? "0") else { return }
+        
+        currencyToValue.text = String(format: "%.2f", convert(dollars: dollars))
     }
     
     func convert(dollars: Double) -> Double {

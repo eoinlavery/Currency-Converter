@@ -144,9 +144,6 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="go"/>
-                                                        <connections>
-                                                            <action selector="currencyFromDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="DvF-Un-jNe"/>
-                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -209,7 +206,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZE-Rv-xa7">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZE-Rv-xa7">
                                                         <rect key="frame" x="43" y="0.0" width="315" height="74"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="74" id="drW-8n-h2G"/>
@@ -236,6 +233,20 @@
                                     <constraint firstAttribute="height" constant="180" id="YLr-jI-HIh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-Xf-zbi">
+                                <rect key="frame" x="20" y="528" width="374" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j19-kg-MVI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Convert!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6wl-Pb-IsT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.24817132949829102" green="0.56055402755737305" blue="0.87062382698059082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -243,12 +254,16 @@
                             <constraint firstItem="45e-VX-YSi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="LZd-tS-eAF"/>
                             <constraint firstItem="SYu-4x-adG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PvU-Db-Lie"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="45e-VX-YSi" secondAttribute="trailing" constant="20" id="dcG-jB-5cR"/>
+                            <constraint firstItem="IYM-Xf-zbi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kVd-Tu-To6"/>
+                            <constraint firstItem="IYM-Xf-zbi" firstAttribute="top" secondItem="SYu-4x-adG" secondAttribute="bottom" constant="20" id="kr8-gJ-pFw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SYu-4x-adG" secondAttribute="trailing" constant="20" id="tcz-A6-zVz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYM-Xf-zbi" secondAttribute="trailing" constant="20" id="wLo-yT-5jq"/>
                             <constraint firstItem="SYu-4x-adG" firstAttribute="top" secondItem="45e-VX-YSi" secondAttribute="bottom" constant="20" id="yg7-kQ-3eA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="convertButton" destination="IYM-Xf-zbi" id="ca6-C3-xMI"/>
                         <outlet property="currencyFromTextField" destination="oZB-Vy-WXH" id="dmM-rU-OtJ"/>
                         <outlet property="currencyFromView" destination="45e-VX-YSi" id="Xwx-Ql-jcc"/>
                         <outlet property="currencyToFlag" destination="h3K-5t-XWh" id="4LX-8P-9e2"/>
