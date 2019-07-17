@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A462739D22DF3A1E00974CA6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A462739C22DF3A1E00974CA6 /* logo.png */; };
+		A462739F22DF3B2400974CA6 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A462739E22DF3B2400974CA6 /* logo@2x.png */; };
 		A4F7C0DA22DE672700BEE1AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7C0D922DE672700BEE1AB /* AppDelegate.swift */; };
-		A4F7C0DC22DE672700BEE1AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7C0DB22DE672700BEE1AB /* ViewController.swift */; };
+		A4F7C0DC22DE672700BEE1AB /* CurrencyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7C0DB22DE672700BEE1AB /* CurrencyDetailViewController.swift */; };
 		A4F7C0DF22DE672700BEE1AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0DD22DE672700BEE1AB /* Main.storyboard */; };
 		A4F7C0E122DE672700BEE1AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0E022DE672700BEE1AB /* Assets.xcassets */; };
 		A4F7C0E422DE672700BEE1AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0E222DE672700BEE1AB /* LaunchScreen.storyboard */; };
@@ -24,9 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A462739C22DF3A1E00974CA6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		A462739E22DF3B2400974CA6 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		A4F7C0D622DE672700BEE1AB /* Currency Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F7C0D922DE672700BEE1AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4F7C0DB22DE672700BEE1AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4F7C0DB22DE672700BEE1AB /* CurrencyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailViewController.swift; sourceTree = "<group>"; };
 		A4F7C0DE22DE672700BEE1AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4F7C0E022DE672700BEE1AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4F7C0E322DE672700BEE1AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,10 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				A4F7C0D922DE672700BEE1AB /* AppDelegate.swift */,
-				A4F7C0DB22DE672700BEE1AB /* ViewController.swift */,
+				A4F7C0FC22DE7EB200BEE1AB /* CurrencyClass.swift */,
 				A4F7C0F822DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift */,
 				A4F7C0FA22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift */,
-				A4F7C0FC22DE7EB200BEE1AB /* CurrencyClass.swift */,
+				A4F7C0DB22DE672700BEE1AB /* CurrencyDetailViewController.swift */,
 				A4F7C0DD22DE672700BEE1AB /* Main.storyboard */,
 				A4F7C0E022DE672700BEE1AB /* Assets.xcassets */,
 				A4F7C0E222DE672700BEE1AB /* LaunchScreen.storyboard */,
@@ -89,6 +93,8 @@
 		A4F7C0EB22DE7B3D00BEE1AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A462739C22DF3A1E00974CA6 /* logo.png */,
+				A462739E22DF3B2400974CA6 /* logo@2x.png */,
 				A4F7C0EC22DE7B5900BEE1AB /* audFlag.png */,
 				A4F7C0F022DE7B5900BEE1AB /* cadFlag.png */,
 				A4F7C0EF22DE7B5900BEE1AB /* euroFlag.png */,
@@ -158,11 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F7C0F622DE7B5900BEE1AB /* cadFlag.png in Resources */,
+				A462739F22DF3B2400974CA6 /* logo@2x.png in Resources */,
 				A4F7C0E422DE672700BEE1AB /* LaunchScreen.storyboard in Resources */,
 				A4F7C0F522DE7B5900BEE1AB /* euroFlag.png in Resources */,
 				A4F7C0F422DE7B5900BEE1AB /* mxnFlag.png in Resources */,
 				A4F7C0F322DE7B5900BEE1AB /* usdFlag.png in Resources */,
 				A4F7C0E122DE672700BEE1AB /* Assets.xcassets in Resources */,
+				A462739D22DF3A1E00974CA6 /* logo.png in Resources */,
 				A4F7C0F222DE7B5900BEE1AB /* audFlag.png in Resources */,
 				A4F7C0DF22DE672700BEE1AB /* Main.storyboard in Resources */,
 				A4F7C0F722DE7B5900BEE1AB /* gbpFlag.png in Resources */,
@@ -177,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F7C0FB22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift in Sources */,
-				A4F7C0DC22DE672700BEE1AB /* ViewController.swift in Sources */,
+				A4F7C0DC22DE672700BEE1AB /* CurrencyDetailViewController.swift in Sources */,
 				A4F7C0F922DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift in Sources */,
 				A4F7C0FD22DE7EB200BEE1AB /* CurrencyClass.swift in Sources */,
 				A4F7C0DA22DE672700BEE1AB /* AppDelegate.swift in Sources */,
@@ -326,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GKY7S4KVZ6;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
@@ -336,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eoinlavery.Currency-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -344,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GKY7S4KVZ6;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
@@ -354,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eoinlavery.Currency-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

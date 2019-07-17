@@ -80,7 +80,7 @@ class CurrencyTableTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         let selectedIndexPath = tableView.indexPathForSelectedRow!
         let selectedCurrency = currencies[selectedIndexPath.row]
-        let detailVC = segue.destination as? ViewController
+        let detailVC = segue.destination as? CurrencyDetailViewController
         detailVC?.currency = selectedCurrency
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CurrencyDetailViewController: UIViewController {
 
     var currency: Currency!
     
