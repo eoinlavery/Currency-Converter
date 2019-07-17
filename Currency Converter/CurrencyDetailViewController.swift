@@ -51,7 +51,8 @@ class CurrencyDetailViewController: UIViewController {
         currencyToPrefix.text = currency.stringSymbol
         
         //Set default dollar rate for label
-        currencyToValue.text = String(format: "%.2f", currency.rateToDollar)
+        currencyToValue.text = "0.00"
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -69,10 +70,15 @@ class CurrencyDetailViewController: UIViewController {
     
     func isConvertButtonEnabled(textField: UITextField) -> Bool {
         if textField.text == "" {
+            resetValueLabel()
             return false
         } else {
             return true
         }
+    }
+    
+    func resetValueLabel() {
+        currencyToValue.text = "0.00"
     }
     
     @IBAction func convertButtonPressed(_ sender: Any) {
