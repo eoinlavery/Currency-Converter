@@ -64,6 +64,11 @@ class CurrencyDetailViewController: UIViewController {
         } else {
             convertButton.alpha = 0.5
         }
+        
+        guard let value: Double = Double(currencyFromTextField.text!) else { return }
+        let valueString = String(format: "%.2f", value)
+        currencyFromTextField.text = valueString
+        
         self.view.endEditing(true)
         
     }
