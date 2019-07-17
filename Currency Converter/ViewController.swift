@@ -10,65 +10,62 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //Declare outlets for labels and buttons
-    @IBOutlet weak var cadButton: UIButton!
-    @IBOutlet weak var pesoButton: UIButton!
-    @IBOutlet weak var currencyToLabel: UILabel!
+    var currency: Currency!
+    
+    //Declare outlets
+    @IBOutlet weak var currencyFromView: UIView!
+    @IBOutlet weak var currencyToView: UIView!
     @IBOutlet weak var currencyFromTextField: UITextField!
-    @IBOutlet weak var currencyToTextField: UITextField!
+    @IBOutlet weak var currencyToSymbol: UILabel!
+    @IBOutlet weak var currencyToFlag: UIImageView!
+    @IBOutlet weak var currencyToPrefix: UILabel!
+    @IBOutlet weak var currencyToValue: UILabel!
+    
+    //Declare currencyFormatter
+    var currencyFormatter = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Get symbol and add to title
+        guard let convertToSymbol = currency?.symbol else { return }
+        title = "USD to \(convertToSymbol)"
+        
+        //Set Background Color
+        self.view.backgroundColor = UIColor(red: 0, green: 0.5686, blue: 0.898, alpha: 1)
+        
+        //Set View Corner Radius
+        currencyFromView.layer.cornerRadius = 20
+        currencyToView.layer.cornerRadius = 20
+        
+        //Set currency to flag
+        currencyToFlag.image = currency.flag
+        
+        //Set currency Symbol to symbol string
+        currencyToSymbol.text = currency.symbol
+        currencyToPrefix.text = currency.stringSymbol
+        
+        //Set default dollar rate for label
+        currencyToValue.text = String(format: "%.2f", currency.rateToDollar)
     }
     
-    //Define CurrencyType Enum and  ddeclare variable to store current state
-    var currencyType: CurrencyType?
-    enum CurrencyType {
-        case cad
-        case peso
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+        self.view.endEditing(true)
     }
     
-    //Decalre functions for buttons and conversion
-    @IBAction func convertButtonPressed(_ sender: Any) {
+    @IBAction func currencyFromDidChange(_ sender: Any) {
         
-        guard let dollars: Double = Double(currencyFromTextField.text!),
-                let currencyType: CurrencyType = currencyType else {
-                    return
-                }
-        
-        //Define currencyFormatter
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale(identifier: "en_US")
-        
-        currencyToTextField.text = currencyFormatter.string(from: NSNumber(value: convert(dollars: dollars, to: currencyType)))
-    }
-    
-    @IBAction func cadButtonPressed(_ sender: Any) {
-        currencyType = .cad
-        cadButton.isSelected = true
-        pesoButton.isSelected = false
-    }
-    
-    
-    @IBAction func pesoButtonPressed(_ sender: Any) {
-        currencyType = .peso
-        pesoButton.isSelected = true
-        cadButton.isSelected = false
-    }
-
-    func convert(dollars: Double, to unit: CurrencyType) -> Double {
-        
-        //Declare variable for exchange rates
-        let cadRate: Double = 1.31
-        let pesoRate: Double = 19.10
-        
-        switch unit {
-        case .cad:
-            return dollars * cadRate
-        case .peso:
-            return dollars * pesoRate
+       guard let dollars: Double = Double(currencyFromTextField.text ?? "0") else { return }
+        if currencyFromTextField.text?.isEmpty == true {
+            currencyToValue.text = "0.00"
+        } else {
+            currencyToValue.text = String(format: "%.2f", convert(dollars: dollars))
         }
+    }
+    
+    func convert(dollars: Double) -> Double {
+        return dollars * currency.rateToDollar
     }
 }
 

@@ -12,6 +12,15 @@
 		A4F7C0DF22DE672700BEE1AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0DD22DE672700BEE1AB /* Main.storyboard */; };
 		A4F7C0E122DE672700BEE1AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0E022DE672700BEE1AB /* Assets.xcassets */; };
 		A4F7C0E422DE672700BEE1AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0E222DE672700BEE1AB /* LaunchScreen.storyboard */; };
+		A4F7C0F222DE7B5900BEE1AB /* audFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0EC22DE7B5900BEE1AB /* audFlag.png */; };
+		A4F7C0F322DE7B5900BEE1AB /* usdFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0ED22DE7B5900BEE1AB /* usdFlag.png */; };
+		A4F7C0F422DE7B5900BEE1AB /* mxnFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0EE22DE7B5900BEE1AB /* mxnFlag.png */; };
+		A4F7C0F522DE7B5900BEE1AB /* euroFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0EF22DE7B5900BEE1AB /* euroFlag.png */; };
+		A4F7C0F622DE7B5900BEE1AB /* cadFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0F022DE7B5900BEE1AB /* cadFlag.png */; };
+		A4F7C0F722DE7B5900BEE1AB /* gbpFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F7C0F122DE7B5900BEE1AB /* gbpFlag.png */; };
+		A4F7C0F922DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7C0F822DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift */; };
+		A4F7C0FB22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7C0FA22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift */; };
+		A4F7C0FD22DE7EB200BEE1AB /* CurrencyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7C0FC22DE7EB200BEE1AB /* CurrencyClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		A4F7C0E022DE672700BEE1AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4F7C0E322DE672700BEE1AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4F7C0E522DE672700BEE1AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F7C0EC22DE7B5900BEE1AB /* audFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audFlag.png; sourceTree = "<group>"; };
+		A4F7C0ED22DE7B5900BEE1AB /* usdFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usdFlag.png; sourceTree = "<group>"; };
+		A4F7C0EE22DE7B5900BEE1AB /* mxnFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mxnFlag.png; sourceTree = "<group>"; };
+		A4F7C0EF22DE7B5900BEE1AB /* euroFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = euroFlag.png; sourceTree = "<group>"; };
+		A4F7C0F022DE7B5900BEE1AB /* cadFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cadFlag.png; sourceTree = "<group>"; };
+		A4F7C0F122DE7B5900BEE1AB /* gbpFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gbpFlag.png; sourceTree = "<group>"; };
+		A4F7C0F822DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableTableViewController.swift; sourceTree = "<group>"; };
+		A4F7C0FA22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		A4F7C0FC22DE7EB200BEE1AB /* CurrencyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +74,29 @@
 			children = (
 				A4F7C0D922DE672700BEE1AB /* AppDelegate.swift */,
 				A4F7C0DB22DE672700BEE1AB /* ViewController.swift */,
+				A4F7C0F822DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift */,
+				A4F7C0FA22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift */,
+				A4F7C0FC22DE7EB200BEE1AB /* CurrencyClass.swift */,
 				A4F7C0DD22DE672700BEE1AB /* Main.storyboard */,
 				A4F7C0E022DE672700BEE1AB /* Assets.xcassets */,
 				A4F7C0E222DE672700BEE1AB /* LaunchScreen.storyboard */,
 				A4F7C0E522DE672700BEE1AB /* Info.plist */,
+				A4F7C0EB22DE7B3D00BEE1AB /* Images */,
 			);
 			path = "Currency Converter";
+			sourceTree = "<group>";
+		};
+		A4F7C0EB22DE7B3D00BEE1AB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4F7C0EC22DE7B5900BEE1AB /* audFlag.png */,
+				A4F7C0F022DE7B5900BEE1AB /* cadFlag.png */,
+				A4F7C0EF22DE7B5900BEE1AB /* euroFlag.png */,
+				A4F7C0F122DE7B5900BEE1AB /* gbpFlag.png */,
+				A4F7C0EE22DE7B5900BEE1AB /* mxnFlag.png */,
+				A4F7C0ED22DE7B5900BEE1AB /* usdFlag.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +157,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F7C0F622DE7B5900BEE1AB /* cadFlag.png in Resources */,
 				A4F7C0E422DE672700BEE1AB /* LaunchScreen.storyboard in Resources */,
+				A4F7C0F522DE7B5900BEE1AB /* euroFlag.png in Resources */,
+				A4F7C0F422DE7B5900BEE1AB /* mxnFlag.png in Resources */,
+				A4F7C0F322DE7B5900BEE1AB /* usdFlag.png in Resources */,
 				A4F7C0E122DE672700BEE1AB /* Assets.xcassets in Resources */,
+				A4F7C0F222DE7B5900BEE1AB /* audFlag.png in Resources */,
 				A4F7C0DF22DE672700BEE1AB /* Main.storyboard in Resources */,
+				A4F7C0F722DE7B5900BEE1AB /* gbpFlag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F7C0FB22DE7DDB00BEE1AB /* CurrencyTableViewCell.swift in Sources */,
 				A4F7C0DC22DE672700BEE1AB /* ViewController.swift in Sources */,
+				A4F7C0F922DE7D2D00BEE1AB /* CurrencyTableTableViewController.swift in Sources */,
+				A4F7C0FD22DE7EB200BEE1AB /* CurrencyClass.swift in Sources */,
 				A4F7C0DA22DE672700BEE1AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
